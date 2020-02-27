@@ -1,0 +1,165 @@
+@import "{}/client/styles/black-tie.min.css";
+@import "{}/client/styles/overrides.import.less";
+@import "{}/client/styles/mixins.import.less";
+@import "{}/client/styles/responsive.import.less";
+@import "{}/client/styles/global.import.less";
+// @import "{}/client/styles/sweetalert.less";
+
+svg {
+    //border: 1px solid #f0f;
+    overflow: visible;
+}
+
+.tick line {
+    stroke: #ccc;
+}
+
+#heroContainer {
+	// background: url(http://res.cloudinary.com/field-test/image/upload/c_scale,dpr_auto,f_auto,fl_lossy.progressive,h_1068,q_70,w_1600/v1502567281/popup-01.jpg) center center;
+	background: url('http://res.cloudinary.com/field-test/image/upload/dpr_auto,fl_lossy.progressive,q_80/v1513294126/tlg/irl-watertowerplace-0001191_1024.jpg') center center;
+	background-size: cover;
+	// height: calc(~'100vh - 42px');
+	height: 66vh;
+	overflow: hidden;
+	// z-index: -1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	& #heroContents {
+		z-index: 1;
+		& h4 {
+			margin-top: 15px;
+			background: fade(@whiteWash, 66%);
+			border: 1px solid @blue;
+			padding: 15px;
+			border-radius: @radius;
+			.outset;
+		}
+	}
+	& #heroCover {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		// background: fade(@yellow, 66%);
+
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cbc5c1+0,a3aab1+100&0.66+0,0.66+100 */
+		background-image: -moz-linear-gradient(-45deg, rgba(203,197,193,0.66) 0%, rgba(163,170,177,0.66) 100%); /* FF3.6-15 */
+		background-image: -webkit-linear-gradient(-45deg, rgba(203,197,193,0.66) 0%,rgba(163,170,177,0.66) 100%); /* Chrome10-25,Safari5.1-6 */
+		background-image: linear-gradient(135deg, rgba(203,197,193,0.66) 0%,rgba(163,170,177,0.66) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a8cbc5c1', endColorstr='#a8a3aab1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	}
+}
+
+#ownerGraph {
+	text-align: center;
+	// height: 16rem;
+	// position: relative;
+	// width: 100%;
+	// height: 100%;
+}
+
+#brandGraph > svg {
+	text-align: center;
+	// width: 100%;
+	// height: 100%;
+}
+
+#press {
+	& .flexRow {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	// & .flexRow > [class*='col-'] {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// }
+	& .pressBox {
+		display: flex;
+		flex-direction: column;
+		padding: 10px;
+	}
+	& a.card {
+		.transition;
+		color: @denim;
+		height: 100%;
+		width: 100%;
+		background-color: white;
+		border-radius: @radius;
+		opacity: 0.5;
+		text-decoration: none;
+		padding: 20px;
+	}
+	& a:hover {
+		.transition;
+		opacity: 1;
+	}
+}
+
+.team {
+	& .card-img-container {
+		padding: 60px 10px 60px;
+		& .card-img-top {
+			border-radius: 50%;
+			// padding: 40px;
+			box-shadow: 3px 4px 5px fade(@denim, 10%);
+		}
+	}
+	& p {
+		font-size: 15px;
+		color: lighten(@denim, 10%);
+	}
+}
+
+#team {
+	& .flexRow {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	// & .flexRow > [class*='col-'] {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// }
+	& .teamBox {
+		display: flex;
+		flex-direction: column;
+		padding: 10px;
+	}
+	& a.card {
+		.transition;
+		color: @denim;
+		height: 100%;
+		width: 100%;
+		background-color: white;
+		border-radius: @radius;
+		opacity: 0.5;
+		text-decoration: none;
+		padding: 20px;
+	}
+	& a:hover {
+		.transition;
+		opacity: 1;
+	}
+}
+
+#loginPage {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	& .loginBox {
+		padding: 20px;
+		border-radius: 8px;
+		background-color: white;
+		border: 1px solid @blue
+	}
+}
+
+#signupPage {
+
+}

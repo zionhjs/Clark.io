@@ -1,0 +1,8 @@
+node_modules/
+mup.js
+mup-prod.js
+mup-staging.js
+mup-prod.json
+mup-staging.json
+.env
+.meteor/local

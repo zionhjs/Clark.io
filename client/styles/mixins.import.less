@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic,900,900italic|Inconsolata:400,700,900|Lusitana:400,900');
+
+@font-face {
+  font-family:'Akkurat';
+  src: url('fonts/akkurat_regular-webfont.eot');
+  src: url('fonts/akkurat_regular-webfont.eot?#iefix') format('embedded-opentype'),
+	   url('fonts/akkurat_regular-webfont.woff2') format('woff2'),
+       url('fonts/akkurat_regular-webfont.woff') format('woff'),
+       url('fonts/akkurat_regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'Akkurat Light';
+  src: url('fonts/akkurat_light-webfont.eot');
+  src: url('fonts/akkurat_light-webfont.eot?#iefix') format('embedded-opentype'),
+	   url('fonts/akkurat_light-webfont.woff2') format('woff2'),
+       url('fonts/akkurat_light-webfont.woff') format('woff'),
+       url('fonts/akkurat_light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@cashmere : #cbc5c1;
+@frenchBlue : #a2aab0;
+@burntAmber : #b37c57;
+@whiteWash : #ebeced;
+@denim : #4c586f;
+@gunmetal : #3e3e3b;
+@gunmetalLight : lighten(color(#3e3e3b), 20%);
+
+// new Colors
+@yellow: #FFFD82;
+@blue: #054A91;
+@blueDark: #2C3147;
+@teal: #4CB5AB;
+
+@radius: 2px;
+
+@track-color: saturate(@blue, 50%);
+@thumb-color: white;
+
+@thumb-radius: 50%;
+@thumb-height: 10px;
+@thumb-width: 10px;
+@thumb-shadow-size: 0;
+@thumb-shadow-blur: 0;
+@thumb-shadow-color: @blue;
+@thumb-border-width: 0;
+@thumb-border-color: lighten(@blue, 10%);
+
+@track-width: 100%;
+@track-height: 3px;
+@track-shadow-size: 0;
+@track-shadow-blur: 0;
+@track-shadow-color: black;
+@track-border-width: 0;
+@track-border-color: black;
+
+@track-radius: 0;
+@contrast: 5%;
+
+.cashmere{color: @cashmere;}
+.frenchBlue{color: @frenchBlue;}
+.burntAmber{color: @burntAmber;}
+.whiteWash{color: @whiteWash;}
+.denim{color: @denim;}
+.gunmetal{color: @gunmetal;}
+
+.yellow{color: @yellow;}
+.blue{color: @blue;}
+.blueDark{color: @blueDark;}
+.teal{color: @teal;}
+
+.noPadding {padding: 0 !important;}
+.smPadding {padding: 1em !important;}
+.noMargin {margin: 0 !important;}
+.smMarginHorizontal { margin: 0 15px !important; }
+.noMarginRight {margin-right: 0 !important}
+.marginRight1 {margin-right: 1vw;}
+
+.transition {transition: all .3s linear;}
+.fastTransition {transition: all .1s linear;}
+
+.font1 {font-family: 'Source Sans Pro', sans-serif !important;}
+.font2 {font-family: 'Akkurat', sans-serif !important;}
+.font3 {font-family: 'Akkurat Light', sans-serif !important;}
+
+p.richText {
+	text-align: justify;
+	padding: 8px 15px;
+	font-weight: 400;
+	font-size: 18px;
+	letter-spacing: 1.2px;
+	line-height: 22px;
+	color: @blue;
+}
+
+.outset {box-shadow: 0px 0px 3px rgba(0,0,0,0.123)}
+.outset1 {box-shadow: 2px 3px 4px rgba(0,0,0,0.066)}
+.outset2 {box-shadow: 5px 6px 7px rgba(0,0,0,0.033)}
+.outset3 {box-shadow: 8px 9px 10px rgba(0,0,0,0.018)}
+
+.inset {
+	box-shadow: inset 0 0 40px rgba(0,0,0,0.123);
+}
+
+.spacerV40 {
+	display: block;
+	margin: 20px 0;
+}
+
+.spacerV100 {
+	display: block;
+	margin: 50px 0;
+}
+
+.huge {
+	font-size: 64px;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.borderRight {
+	border-right: 1px solid @gunmetalLight;
+}
+
+.circular {
+	border-radius: 50%;
+}

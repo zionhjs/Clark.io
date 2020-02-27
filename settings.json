@@ -1,0 +1,14 @@
+{
+	"public": {
+		"loginState": {
+			"domain": ".field-test.co",
+			"cookieName": "ft-dashboard"
+		}
+	},
+	"private": {
+		"MailChimp": {
+			"apiKey": "42944ad2e048540628d6039d5375e41b755b998f3219fd89e1",
+			"listId": "5e163e6344"
+		}
+	}
+}

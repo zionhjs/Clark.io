@@ -1,0 +1,250 @@
+.shadow(@shadow-size,@shadow-blur,@shadow-color) {
+  box-shadow: @shadow-size @shadow-size @shadow-blur @shadow-color, 0px 0px @shadow-size lighten(@shadow-color,5%);
+}
+
+.track() {
+  width: @track-width;
+  height: @track-height;
+  cursor: pointer;
+  animate: 0.2s;
+}
+
+.thumb() {
+  .shadow(@thumb-shadow-size,@thumb-shadow-blur,@thumb-shadow-color);
+  border: @thumb-border-width solid @thumb-border-color;
+  height: @thumb-height;
+  width: @thumb-width;
+  border-radius: @thumb-radius;
+  background: @thumb-color;
+  cursor: pointer;
+  opacity: 0;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: @thumb-height/2 0;
+  width: @track-width;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+    .track();
+    .shadow(@track-shadow-size,@track-shadow-blur,@track-shadow-color);
+    background: @track-color;
+    border-radius: @track-radius;
+    border: @track-border-width solid @track-border-color;
+  }
+
+  &::-webkit-slider-thumb {
+    .thumb();
+    -webkit-appearance: none;
+    margin-top: ((-@track-border-width * 2 + @track-height) / 2) - (@thumb-height / 2);
+  }
+
+  &:focus::-webkit-slider-runnable-track {
+    background: lighten(@track-color, @contrast);
+  }
+
+  &::-moz-range-track {
+    .track();
+    .shadow(@track-shadow-size,@track-shadow-blur,@track-shadow-color);
+    background: @track-color;
+    border-radius: @track-radius;
+     border: @track-border-width solid @track-border-color;
+  }
+  &::-moz-range-thumb {
+     .thumb();
+  }
+
+  &::-ms-track {
+    .track();
+    background: transparent;
+    border-color: transparent;
+    border-width: @thumb-width 0;
+    color: transparent;
+  }
+
+  &::-ms-fill-lower {
+    background: darken(@track-color, @contrast);
+    border: @track-border-width solid @track-border-color;
+    border-radius: @track-radius*2;
+    .shadow(@track-shadow-size,@track-shadow-blur,@track-shadow-color);
+  }
+  &::-ms-fill-upper {
+    background: @track-color;
+    border: @track-border-width solid @track-border-color;
+    border-radius: @track-radius*2;
+    .shadow(@track-shadow-size,@track-shadow-blur,@track-shadow-color);
+  }
+  &::-ms-thumb {
+    .thumb();
+  }
+  &:focus::-ms-fill-lower {
+    background: @track-color;
+  }
+  &:focus::-ms-fill-upper {
+    background: lighten(@track-color, @contrast);
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+hr {border-color: fade(@whiteWash, 33%);}
+
+a {color: fade(black, 88%)}
+a:hover, a:active {color: black}
+
+.badge {
+  background-color: @blue;
+}
+
+.btn {
+  border: 0;
+  border-radius: @radius;
+  font-style: normal;
+  .font1;
+  margin: 10px;
+  padding: 6px 18px;
+}
+
+.btn:focus {outline:none;}
+.btn-default {
+  background: lighten(@blue, 10%);
+  color: @gunmetal;
+  border: 0;
+  &:hover {
+    color: @gunmetal;
+    background-color: darken(@blue, 10%);
+  }
+}
+.btn-default:hover, .btn-default:active, .btn-default:visited {background: lighten(@blue, 20%);}
+
+.btn-primary {
+  border: 0;
+  background: fade(@teal, 88%);
+  &:hover {background: @teal; color: @whiteWash !important;}
+  &:focus {background: @teal}
+  &:active {background: darken(@teal, 10%)}
+}
+
+.btn-accent {
+  border: 0;
+  background: fade(@denim, 88%);
+  color: @whiteWash;
+  &:hover {background: @denim; color: @whiteWash !important;}
+  &:focus {background: @denim}
+  &:active {background: darken(@denim, 10%)}
+}
+
+.btn-clear {
+  border: 0;
+  background: transparent !important;
+  color: @denim;
+  text-decoration: underline;
+  &:hover {background: transparent !important; color: @blue !important; text-decoration: underline;}
+  &:focus {background: transparent !important}
+  &:active {background: transparent !important}
+}
+
+.btn-success {
+  background: fade(@teal, 88%);
+  &:hover {background: @teal}
+  &:focus {background: @teal}
+  &:active {background: darken(@teal, 10%)}
+}
+
+.btn-big {
+  .transition;
+  border: 0;
+  border-radius: 4px;
+  font-style: normal;
+  .font1;
+  background-color: @cashmere;
+  padding: 20px;
+  margin: 20px;
+  &:hover {
+    .transition;
+    background-color: @blue
+  }
+}
+
+// #login-dropdown-list {
+//   left: -178px;
+//   & input {
+//     display: block;
+//   }
+// }
+//
+#login-buttons .login-button {
+  background: fade(@blue, 66%);
+  border: 0px;
+  &:hover {
+    background: @blue;
+    color: @whiteWash;
+  }
+}
+//
+// a.login-close-text {
+//   float: right !important;
+// }
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.form-control:focus {
+  border-color: @blue;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px fade(@blue, 66%);
+}
+
+.input-group-addon {
+  width: auto;
+  height: 34px;
+  padding: 9px 12px;
+  background: @blue;
+  color: white;
+}
+
+.form-control.with-right-addon {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form-control.with-left-addon {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+// Login/Register forms
+
+.loginForm input {
+  // padding: 10px;
+  width: 80%;
+  display: block;
+  outline:none;
+}
+
+.loginFormEffects:focus {
+  border-color: @blue;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px fade(@blue, 66%);
+}
+
+// SweetAlert
+
+.sweet-alert .sa-icon.sa-error {border-color: @teal !important;}
+
+.sweet-alert .sa-icon.sa-error .sa-line {background-color: @teal !important}
+
+.sweet-alert button {background-color: @denim !important}
+
+// Material UI
+
+.card-text {
+  font-size: 14px;
+}
